@@ -1,0 +1,32 @@
+# core
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+statsmodels>=0.14
+pyarrow>=12.0
+
+# gradient boosting
+xgboost>=2.0
+catboost>=1.2
+
+# tuning and tracking
+optuna>=3.4
+
+# time series and finance
+arch>=6.2            # GARCH / EGARCH / GJR
+hmmlearn>=0.3        # Markov regime switching
+yfinance>=0.2.40     # optional: live prices, the app works offline without it
+
+# app, notebooks and charts
+streamlit>=1.32
+plotly>=5.18
+matplotlib>=3.7
+seaborn>=0.13
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.9
+
+# interpretability and testing
+shap>=0.44
+pytest>=7.4

@@ -1,0 +1,22 @@
+# QuantBoost run configuration. Mirrors src/quantboost/config.py::Config.
+data:
+  universe: [AAPL, MSFT, NVDA, JPM, GS, BAC, XOM, CVX, JNJ, PFE, PG, KO, HD, CAT,
+             UNH, T, SPY, QQQ, IWM, TLT, HYG, GLD, XLF, XLE]
+  start: "2010-01-01"
+  end: "2024-12-31"
+  offline: true          # true = simulated panel, runs with no internet
+
+signal:
+  horizon: 5             # forecast horizon in trading days (1, 5 or 21)
+  quantile: 0.2          # long/short tail width
+
+validation:
+  n_folds: 5
+  embargo: 5             # extra days skipped after each test block
+  n_trials: 25           # Optuna trials; 0 skips tuning
+  seed: 7
+
+execution:
+  half_spread_bps: 5.0
+  impact_bps: 8.0        # square-root impact coefficient
+  vol_target: 0.10       # annualised
